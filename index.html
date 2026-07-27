@@ -132,6 +132,18 @@ html, body { height: 100%; overflow: hidden; background: #000; }
 }
 .skip-btn:hover { color: #555; }
 
+.corner-blur {
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 38%;
+  height: 32%;
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  pointer-events: none;
+  z-index: 9;
+}
+
 .center-wm {
   position: absolute;
   bottom: 6%;
@@ -167,6 +179,8 @@ html, body { height: 100%; overflow: hidden; background: #000; }
   <div class="player-wrap" id="playerWrap">
 
     <div class="state-msg" id="stateMsg">Loading stream...</div>
+
+    <div class="corner-blur"></div>
 
     <img class="center-wm" src="https://i.ibb.co/GQfmFNj4/fxdvbv.jpg" alt="" draggable="false">
 
