@@ -218,6 +218,12 @@ html, body { height: 100%; overflow: hidden; background: #000; }
 </div>
 
 <script>
+// Show the Telegram join popup a couple seconds after page load — independent of stream status
+setTimeout(function () {
+  var ov = document.getElementById('overlay');
+  if (ov) ov.style.display = 'flex';
+}, 2000);
+
 (async function () {
   // Loads streams.json directly from the same hosting server
   const JSON_URL = "./streams.json";
